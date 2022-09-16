@@ -1,9 +1,11 @@
 #include<iostream>
 #include<algorithm>
 #include<string>
+
 using namespace std;
 const int N = 210, M = 810, base = 400;//偏移，因为偏差范围在-400--400之间，数组没有负的
 int f[N][21][M], p[N], d[N], ans[N], n, m;
+
 int main()
 {
     
@@ -17,7 +19,7 @@ int main()
 
         memset(f, -0x3f, sizeof f);   //因为求最大值, 故赋值为负无穷   在memset函数里面0x3f为无穷大，前面加负号表示负无穷
 
-        f[0][0][base] = 0;  //初始化为0 
+        f[0][0][base] = 0;  //初始化为0
         int cnt = 0;   
 
         for (int i = 1; i <= n; i++)  //枚举前i个人
@@ -72,7 +74,7 @@ int main()
 
 4 2
 1 2
-2 3 
+2 3
 4 1
 6 2
 0 0
